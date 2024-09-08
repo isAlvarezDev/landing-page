@@ -1,0 +1,532 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+header,
+ul,
+li,
+a,
+main,
+footer,
+p,
+h1,
+h2,
+h3,
+button,
+div,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    --primary-color: #FEFDFF;
+    --secondary-color: #DC3509;
+    --header-color: #32A4FE;
+    --main-experience-bg: #FFF0F5;
+    --button-color: #4682B4;
+    --bg-button: #FDF937;
+    --border-bottom-color: #87ECEB;
+    --blue-color: #0A9CDA;
+    --yellow-color: #FDC82A;
+    --red-color: #E21C2D;
+    --green-color: #5AA954;
+    --brown-color: #853328;
+    --text-shadow: #1B0A0D;
+    font-family: "Barlow";
+    background-color: var(--primary-color);
+}
+
+/* HEADER SECTION */
+
+.header {
+    background-color: var(--header-color);
+    padding: 20px;
+    container-name: header;
+    container-type: inline-size;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.header__p {
+    font-family: "RetroMario";
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px var(--text-shadow);
+    -webkit-text-stroke: 2px var(--text-shadow);
+}
+
+.header__letter-h {
+    color: var(--blue-color);
+}
+
+.header__letter-o {
+    color: var(--yellow-color);
+}
+
+.header__letter-l {
+    color: var(--red-color);
+}
+
+.header__letter-a {
+    color: var(--green-color);
+}
+
+.header__letter-j {
+    color: var(--yellow-color);
+}
+
+.header__letter-u {
+    color: var(--red-color);
+}
+
+.header__letter-n {
+    color: var(--green-color);
+}
+
+.header__letter-i {
+    color: var(--blue-color);
+}
+
+.header__letter-r {
+    color: var(--green-color);
+}
+
+.header__letter-s {
+    color: var(--blue-color);
+}
+
+.header__letter-c {
+    color: var(--red-color);
+}
+
+.header__letter-m {
+    color: var(--green-color);
+}
+
+.header__icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.header__button {
+    font-weight: 400;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+/* HEADER SECTION ENDS */
+
+/* MAIN SECTION */
+.main {
+    container-name: main;
+    container-type: inline-size;
+}
+
+.main__presentation {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 75rem));
+    justify-content: center;
+    align-content: center;
+    place-content: center;
+    gap: 1rem;
+    animation: appear .8s linear both;
+}
+
+.main__biography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+}
+
+h1 span {
+    font-family: "RetroMario";
+    -webkit-text-stroke: 1px var(--text-shadow);
+}
+
+h1 img {
+    filter: drop-shadow(0 0 1.5px var(--brown-color));
+}
+
+.main__img {
+    border-radius: 10px;
+    margin: auto;
+    object-fit: contain;
+}
+
+.main__h2 {
+    font-weight: 400;
+    color: var(--blue-color);
+}
+
+.main__h2::first-letter {
+    color: var(--red-color);
+}
+
+.main__p {
+    text-align: justify;
+    opacity: .89;
+    color: var(--brown-color);
+    text-shadow: 0 0 2px var(--yellow-color);
+    line-height: 1.4;
+    padding: 0rem 1rem;
+}
+
+.main__skill-bg {
+    background-image: linear-gradient(#222a, #000f), url("img/diseño.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main__h2--color {
+    color: var(--red-color);
+    margin-bottom: 12px;
+    -webkit-text-stroke: 1px var(--text-shadow);
+    filter: brightness(1.5);
+}
+
+.main__h2--color::first-letter {
+    color: var(--blue-color);
+}
+
+.main__skill-p {
+    max-width: 50%;
+    margin: auto;
+    line-height: 1.5;
+    color: var(--bg-button);
+    text-shadow: 0 0 2px var(--text-color);
+    text-align: justify;
+    filter: brightness(1.2);
+}
+
+.main__skill {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    animation: reveal cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-timeline: view(block);
+    animation-range: contain -25% contain 80%;
+}
+
+.main__skill-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main__h3 {
+    text-shadow: none;
+    font-size: clamp(1.25rem, 8vw, 1.8rem);
+}
+
+.main__p--color {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+.main__h3--jump {
+    color: var(--green-color);
+}
+
+.main__h3--fire {
+    color: var(--secondary-color);
+}
+
+.main__h3--swim {
+    color: var(--header-color);
+}
+
+.main__p--maxwidth {
+    padding-top: 1rem;
+    max-width: 50%;
+    margin: auto;
+}
+
+.main__experience-bg {
+    background-color: var(--main-experience-bg);
+    animation: appear linear both;
+    animation-timeline: view(block);
+    animation-range: cover -30% contain 70%;
+}
+
+.main__link {
+    display: block;
+    max-width: 20%;
+    text-align: center;
+    padding: 12px;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.main__grid {
+    padding: 15px;
+    display: grid;
+    place-content: center;
+    gap: 15px;
+    grid-template-columns: repeat(3, minmax(auto, 320px));
+    grid-template-rows: repeat(2, auto);
+}
+
+.main__grid-item-image:hover {
+    opacity: .77;
+    transition: opacity .37s;
+}
+
+.main__grid-h3 {
+    color: var(--red-color);
+    text-align: center;
+    font-size: clamp(1rem, 3.4vw, 1.1rem);
+}
+
+.main__grid-p {
+    font-size: clamp(.8rem, 2.7vw, 1rem);
+    text-align: justify;
+    line-height: 1.35;
+}
+
+.main__grid-h3--brown-color {
+    color: var(--brown-color);
+}
+
+.main__grid-h3--yellow-color {
+    color: var(--yellow-color);
+}
+
+.main__grid-h3--blue-color {
+    color: var(--blue-color);
+}
+
+.main__grid-h3--green-color {
+    color: var(--green-color);
+}
+
+/* MAIN SECTION ENDS */
+
+/* FOOTER SECTION */
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.footer__titles {
+    text-align: center;
+}
+
+.footer__h2 {
+    font-family: initial;
+}
+
+.footer__link {
+    color: inherit;
+    text-decoration: none;
+    align-self: flex-end;
+    margin: 5px 0;
+}
+
+/* FOOTER SECTION ENDS */
+
+/* SELECTORS WITH SAME PROPERTIES AND VALUES */
+
+.header__container,
+.main__presentation,
+.main__experience,
+.main__skills,
+.footer__container {
+    margin: auto;
+    max-width: 75rem;
+}
+
+.main__titles {
+    margin: 0 2rem;
+}
+
+.main__skills,
+.main__experience {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+h2 {
+    font-family: "RetroMario";
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--yellow-color);
+}
+
+.header__button,
+.main__link {
+    border-bottom: 3px solid var(--border-bottom-color);
+    border-radius: 6px;
+    background-color: var(--bg-button);
+    color: var(--button-color);
+}
+
+.main__swim-skill,
+.main__fire-skill,
+.main__jump-skill {
+    flex-basis: 230px;
+}
+
+.header__link,
+.header__p {
+    font-size: clamp(.9rem, 4vw, 1.6rem);
+}
+
+.main__p,
+.main__skill-p {
+    font-size: clamp(.81rem, 3.7vw, 1.3rem);
+}
+
+.main__h2,
+.footer__h2 {
+    font-size: clamp(1.2rem, 4.5vw, 2rem);
+}
+
+.main__h2--color {
+    font-size: clamp(1.87rem, 9vw, 3rem);
+}
+
+/* SELECTORS WITH SAME PROPERTIES AND VALUES ENDS */
+
+/* CONTAINER QUERIES */
+
+@container header (max-width: 569px) {
+    .header__container {
+        flex-direction: column;
+    }
+}
+
+@container main (max-width:750px) {
+    .main__presentation {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@container main (max-width: 530px) {
+    .main__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@container main (max-width: 369px) {
+    .main__grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .header__bros-container {
+        display: none;
+    }
+}
+
+/* CONTAINER QUERIES ENDS */
+
+/*QUERIES SECTION*/
+
+@media screen and (max-width: 450px) {
+    .main__skill-header img {
+        width: 24px;
+    }
+
+    .main__skill-header {
+        gap: 0;
+    }
+
+    .header__button {
+        padding: 4px;
+    }
+
+    .main__p--maxwidth {
+        padding: 0;
+    }
+
+    .main__grid {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    h1 img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .header__com-container {
+        display: none;
+    }
+}
+
+/*QUERIES SECTION END*/
+
+/* ANIMATION SECTION */
+
+@keyframes appear {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ANIMATION SECTION ENDS */
