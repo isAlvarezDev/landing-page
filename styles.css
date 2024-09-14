@@ -132,9 +132,20 @@ body {
 }
 
 .header__button {
+    background-color: var(--bg-button);
+    color: var(--button-color);
     font-weight: 400;
     padding: 6px 16px;
     text-decoration: none;
+    transition: border-bottom-color, .15s;
+    border-bottom-color: var(--border-bottom-color);
+}
+
+.header__button:hover {
+    --bg-button: #FDF937dC;
+    background-color: var(--bg-button);
+    color: var(--header-color);
+    border-bottom: none;
 }
 
 /* HEADER SECTION ENDS */
@@ -280,7 +291,7 @@ h1 img {
     background-color: var(--main-experience-bg);
     animation: appear linear both;
     animation-timeline: view(block);
-    animation-range: cover -30% contain 70%;
+    animation-range: cover -40% contain 29%;
 }
 
 .main__link {
@@ -292,6 +303,14 @@ h1 img {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     text-decoration: none;
+    background-color: var(--red-color);
+    color: var(--main-experience-bg);
+    transition: border-bottom-color, .2s;
+    border-bottom-color: var(--header-color);
+}
+
+.main__link:hover {
+    --red-color: #e21c2dc4;
 }
 
 .main__grid {
@@ -399,10 +418,10 @@ h2 {
 
 .header__button,
 .main__link {
-    border-bottom: 3px solid var(--border-bottom-color);
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
     border-radius: 6px;
-    background-color: var(--bg-button);
-    color: var(--button-color);
+    
 }
 
 .main__swim-skill,
